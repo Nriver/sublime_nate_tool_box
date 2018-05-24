@@ -3,6 +3,10 @@ Nate 的 Sublime Text 自制插件
 
 # 文件结构
 
+#### .no-sublime-package
+防止sublime text把插件以.sublime-package的压缩包形式发布插件
+
+
 #### Default (Windows).sublime-keymap  
 sublime text的快捷键设置  
 alt+z 快速触发插件的函数  
