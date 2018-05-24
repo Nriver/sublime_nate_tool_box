@@ -1,0 +1,9 @@
+[
+    { "keys": ["alt+z"],
+        "caption": "nate tool box",
+        "command": "nate_tool_box","args":
+        {
+            // "id": "test",
+        }
+    },
+]
