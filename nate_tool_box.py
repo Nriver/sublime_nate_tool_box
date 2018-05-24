@@ -2,7 +2,7 @@
 # @Author: Zengjq
 # @Date:   2018-05-24 10:03:35
 # @Last Modified by:   Zengjq
-# @Last Modified time: 2018-05-24 10:20:49
+# @Last Modified time: 2018-05-24 15:43:32
 import sublime
 import sublime_plugin
 import os
@@ -132,6 +132,7 @@ class nateToolBoxCommand(sublime_plugin.TextCommand):
             # 使用第三方的插件 直接拷贝到目录下来使用
 
             # delegator模块 输出当前路径 和getcwd()效果一样
+            print("使用第三方的插件")
             result = delegator.run('echo %cd%')
             print(result.out)
 
