@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Zengjq
 # @Date:   2018-05-24 10:03:35
-# @Last Modified by:   Zengjq
-# @Last Modified time: 2018-05-24 15:43:32
+# @Last Modified by:   nate
+# @Last Modified time: 2018-05-28 11:42:51
 import sublime
 import sublime_plugin
 import os
@@ -36,7 +36,8 @@ def append_if_not_in(element_list, target_list):
             print("添加系统环境", element)
             target_list.append(element)
 
-# 使用系统模块的方法
+# !!! 十分不稳定 建议不要使用 !!!
+#  !!!   使用系统模块的方法 !!!
 import sys
 # sys.path.append('C:\\Python36')
 # sys.path.append('C:\\Python36\\python36.zip')
@@ -44,16 +45,42 @@ import sys
 # sys.path.append('C:\\Python36\\lib')
 # sys.path.append('C:\\Python36\\lib\\site-packages')
 
-python_path_list = ['C:\\Python36',
-                    'C:\\Python36\\python36.zip',
-                    'C:\\Python36\\DLLs',
-                    'C:\\Python36\\lib',
-                    'C:\\Python36\\lib\\site-packages', ]
+import platform
+if platform.system() == 'Windows':
+    python_path_list = ['C:\\Python36',
+                        'C:\\Python36\\python36.zip',
+                        'C:\\Python36\\DLLs',
+                        'C:\\Python36\\lib',
+                        'C:\\Python36\\lib\\site-packages', ]
+elif platform.system() == 'Darwin':
+    # python_path_list = ['/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/',
+    #                     '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/',
+    #                     '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/', ]
+    python_path_list = ['/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/',
+                        '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/',
+                        '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6',
+                        '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/', ]
+elif platform.system() == 'Linux':
+    python_path_list = []
 
 append_if_not_in(python_path_list, sys.path)
 
-import delegator
-import flask
+# delegator.py
+# sublime会找不到模块
+
+# # flask服务 可以用非debug模式启动 但是整个sublime会被卡死
+# import flask
+# from flask import Flask, request
+# app = Flask(__name__)
+# listen_IP = 'localhost'
+# listen_port = 19998
+# debug = False
+# @app.route("/")
+# def hello():
+#    remote_ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
+#    print(remote_ip)
+#    return remote_ip
+# app.run(host=listen_IP, port=int(listen_port), debug=debug)
 
 
 @contextmanager
@@ -132,9 +159,9 @@ class nateToolBoxCommand(sublime_plugin.TextCommand):
             # 使用第三方的插件 直接拷贝到目录下来使用
 
             # delegator模块 输出当前路径 和getcwd()效果一样
-            print("使用第三方的插件")
-            result = delegator.run('echo %cd%')
-            print(result.out)
+            # print("使用第三方的插件")
+            # result = delegator.run('echo %cd%')
+            # print(result.out)
 
             # 结束 输出时间
             print(datetime.datetime.now())
