@@ -4,6 +4,7 @@
     "publish": false
   },
   "github": {
-    "preRelease": true
+    "preRelease": true,
+    "draft": true,
   }
 }
