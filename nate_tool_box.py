@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: Zengjq
 # @Date:   2018-05-24 10:03:35
-# @Last Modified by:   nate
-# @Last Modified time: 2018-05-28 11:42:51
+# @Last Modified by:   Nriver
+# @Last Modified time: 2018-05-29 09:43:05
 import sublime
 import sublime_plugin
 import os
@@ -27,43 +27,43 @@ import datetime
 # 第二种是把python3的运行环境加入到sys.path里面
 
 
-def append_if_not_in(element_list, target_list):
-    """
-    合并list 去重 保持顺序
-    """
-    for element in element_list:
-        if element not in target_list:
-            print("添加系统环境", element)
-            target_list.append(element)
+# def append_if_not_in(element_list, target_list):
+#     """
+#     合并list 去重 保持顺序
+#     """
+#     for element in element_list:
+#         if element not in target_list:
+#             print("添加系统环境", element)
+#             target_list.append(element)
 
-# !!! 十分不稳定 建议不要使用 !!!
-#  !!!   使用系统模块的方法 !!!
-import sys
-# sys.path.append('C:\\Python36')
-# sys.path.append('C:\\Python36\\python36.zip')
-# sys.path.append('C:\\Python36\\DLLs')
-# sys.path.append('C:\\Python36\\lib')
-# sys.path.append('C:\\Python36\\lib\\site-packages')
+# # !!! 十分不稳定 建议不要使用 !!!
+# #  !!!   使用系统模块的方法 !!!
+# import sys
+# # sys.path.append('C:\\Python36')
+# # sys.path.append('C:\\Python36\\python36.zip')
+# # sys.path.append('C:\\Python36\\DLLs')
+# # sys.path.append('C:\\Python36\\lib')
+# # sys.path.append('C:\\Python36\\lib\\site-packages')
 
-import platform
-if platform.system() == 'Windows':
-    python_path_list = ['C:\\Python36',
-                        'C:\\Python36\\python36.zip',
-                        'C:\\Python36\\DLLs',
-                        'C:\\Python36\\lib',
-                        'C:\\Python36\\lib\\site-packages', ]
-elif platform.system() == 'Darwin':
-    # python_path_list = ['/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/',
-    #                     '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/',
-    #                     '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/', ]
-    python_path_list = ['/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/',
-                        '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/',
-                        '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6',
-                        '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/', ]
-elif platform.system() == 'Linux':
-    python_path_list = []
+# import platform
+# if platform.system() == 'Windows':
+#     python_path_list = ['C:\\Python36',
+#                         'C:\\Python36\\python36.zip',
+#                         'C:\\Python36\\DLLs',
+#                         'C:\\Python36\\lib',
+#                         'C:\\Python36\\lib\\site-packages', ]
+# elif platform.system() == 'Darwin':
+#     # python_path_list = ['/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/',
+#     #                     '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/',
+#     #                     '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/', ]
+#     python_path_list = ['/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/',
+#                         '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/',
+#                         '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6',
+#                         '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/', ]
+# elif platform.system() == 'Linux':
+#     python_path_list = []
 
-append_if_not_in(python_path_list, sys.path)
+# append_if_not_in(python_path_list, sys.path)
 
 # delegator.py
 # sublime会找不到模块
