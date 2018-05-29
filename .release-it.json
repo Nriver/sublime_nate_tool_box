@@ -1,5 +1,5 @@
 {
-  "non-interactive": false,
+  "non-interactive": true,
   "npm": {
     "publish": false
   },
