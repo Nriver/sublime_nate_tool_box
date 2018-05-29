@@ -1,6 +1,6 @@
 {
   "name": "Nate Tool Box",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "release": "release-it"
   },
