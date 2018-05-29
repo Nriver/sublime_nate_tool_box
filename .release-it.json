@@ -5,6 +5,6 @@
   },
   "github": {
     "preRelease": true,
-    "draft": true,
+    "draft": true
   }
 }
