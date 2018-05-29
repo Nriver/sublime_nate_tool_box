@@ -2,9 +2,5 @@
   "non-interactive": true,
   "npm": {
     "publish": false
-  },
-  "github": {
-    "preRelease": true,
-    "draft": true
   }
 }
