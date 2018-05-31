@@ -1,5 +1,8 @@
 {
   "non-interactive": true,
+  "github": {
+    "release": true
+  },
   "npm": {
     "publish": false
   }
