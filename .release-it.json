@@ -2,20 +2,5 @@
   "non-interactive": true,
   "npm": {
     "publish": false
-  },
-  "github": {
-    "release": true,
-    "releaseName": "Release %s",
-    "preRelease": false,
-    "draft": false,
-    "tokenRef": "GITHUB_TOKEN",
-    "assets": null,
-    "host": null,
-    "timeout": 0
-  },
-  "dist": {
-    "github": {
-      "release": true
-    }
   }
 }
