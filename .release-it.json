@@ -1,10 +1,7 @@
 {
   "non-interactive": true,
   "github": {
-    "release": true,
-    "preRelease": true,
-    "draft": false,
-    "tokenRef": "GITHUB_TOKEN"
+    "release": true
   },
   "npm": {
     "publish": false
