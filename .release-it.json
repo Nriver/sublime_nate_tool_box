@@ -1,9 +1,18 @@
 {
   "non-interactive": true,
+
+  "npm": {
+    "publish": false
+  },
+
   "github": {
     "release": true
   },
-  "npm": {
-    "publish": false
+
+  "dist": {
+    "github": {
+      "release": true
+    }
   }
+
 }
