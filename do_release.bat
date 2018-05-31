@@ -1,0 +1,2 @@
+command_commit_and_push.bat
+release-it

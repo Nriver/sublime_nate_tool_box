@@ -1,5 +1,15 @@
 {
   "non-interactive": true,
+  "github": {
+    "release": true,
+    "releaseName": "Release %s",
+    "preRelease": true,
+    "draft": false,
+    "tokenRef": "GITHUB_TOKEN",
+    "assets": null,
+    "host": null,
+    "timeout": 0
+  },
   "npm": {
     "publish": false
   }
