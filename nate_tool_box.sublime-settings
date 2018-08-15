@@ -1,4 +1,10 @@
 {
+  "code_snippet_folders": [
+    "E:\\learnPython",
+  ],
+  "ignore_folders": [
+    ".svn",
+  ],
   "human_name_list": [
     "Nate",
     "Jack",

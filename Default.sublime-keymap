@@ -1,0 +1,66 @@
+[
+    {
+        "keys": ["down"], "command": "nate_tool_box_results",
+        "context": [
+            {"key": "setting.command_mode", "operand": true},
+            {"key": "setting.search_results"}
+        ],
+        "args": {"direction": "down"}
+    },
+    {
+        "keys": ["j"], "command": "nate_tool_box_results",
+        "context": [
+            {"key": "setting.command_mode", "operand": true},
+            {"key": "setting.search_results"}
+        ],
+        "args": {"direction": "down"}
+    },
+    {
+        "keys": ["pagedown"], "command": "nate_tool_box_results",
+        "context": [
+            {"key": "setting.command_mode", "operand": true},
+            {"key": "setting.search_results"}
+        ],
+        "args": {"direction": "down_skip"}
+    },
+    {
+        "keys": ["up"], "command": "nate_tool_box_results",
+        "context": [
+            {"key": "setting.command_mode", "operand": true},
+            {"key": "setting.search_results"}
+        ],
+        "args": {"direction": "up"}
+    },
+    {
+        "keys": ["k"], "command": "nate_tool_box_results",
+        "context": [
+            {"key": "setting.command_mode", "operand": true},
+            {"key": "setting.search_results"}
+        ],
+        "args": {"direction": "up"}
+    },
+    {
+        "keys": ["pageup"], "command": "nate_tool_box_results",
+        "context": [
+            {"key": "setting.command_mode", "operand": true},
+            {"key": "setting.search_results"}
+        ],
+        "args": {"direction": "up_skip"}
+    },
+    {
+        "keys": ["enter"], "command": "nate_tool_box_results",
+        "context": [
+            {"key": "setting.command_mode", "operand": true},
+            {"key": "setting.search_results"}
+        ],
+        "args": {"open": true}
+    },
+    {
+        "keys": ["r"], "command": "nate_tool_box_results",
+        "context": [
+            {"key": "setting.command_mode", "operand": true},
+            {"key": "setting.search_results"}
+        ],
+        "args": {"refresh": true}
+    }
+]
